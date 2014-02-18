@@ -19,6 +19,7 @@
   <link href="/assets/stylesheets/pygment_trac.css" rel="stylesheet">
   <link href="/assets/stylesheets/social-buttons.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="/assets/stylesheets/carousel-fade.css" rel="stylesheet">
 
   <!--- so much depends on jQuery, that we do i here first -->
   <script src="/assets/javascripts/jquery-1.10.2.min.js"></script>
@@ -82,7 +83,7 @@
       <div class="row">
 		
 <div class="row">
-<div id="carousel1" class="carousel slide">
+<div id="carousel1" class="carousel slide carousel-fade">
   <!-- Indicators-->
   <ol class="carousel-indicators">
 
@@ -133,7 +134,7 @@
 <script type="text/javascript">
   var $ = jQuery.noConflict();
   $(document).ready(function() { 
-		$('#carousel1').carousel({ interval: 3500, cycle: true });
+		$('#carousel1').carousel({ interval: 4500, cycle: true });
 		$(".carousel-control.left").fadeOut(500);
 		$(".carousel-control.right").fadeOut(500);
 		$(".carousel-indicators").fadeOut(500);
