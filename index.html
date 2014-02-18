@@ -132,7 +132,10 @@
 <script type="text/javascript">
   var $ = jQuery.noConflict();
   $(document).ready(function() { 
-      $('#carousel1').carousel({ interval: 3500, cycle: true });
+		$('#carousel1').carousel({ interval: 3500, cycle: true });
+		$(".carousel-control.left").fadeOut(500);
+		$(".carousel-control.right").fadeOut(500);
+		$(".carousel-indicators").fadeOut(500);
   }); 
   $("#carousel1").hover(
     function(){
