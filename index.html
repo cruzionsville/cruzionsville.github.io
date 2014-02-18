@@ -80,27 +80,23 @@
      <!-- Main component for a primary marketing message or call to action -->
       <div class="row">
 		
-<br>
-<br>
-
-
 <div class="row">
-<div id="carousel-welcome" class="carousel slide">
+<div id="carousel1" class="carousel slide">
   <!-- Indicators-->
   <ol class="carousel-indicators">
 
     
-    <li data-target="#carousel-welcome" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel1" data-slide-to="0" class="active"></li>
     
-    <li data-target="#carousel-welcome" data-slide-to="1" class=""></li>
+    <li data-target="#carousel1" data-slide-to="1" class=""></li>
     
-    <li data-target="#carousel-welcome" data-slide-to="2" class=""></li>
+    <li data-target="#carousel1" data-slide-to="2" class=""></li>
     
-    <li data-target="#carousel-welcome" data-slide-to="3" class=""></li>
+    <li data-target="#carousel1" data-slide-to="3" class=""></li>
     
-    <li data-target="#carousel-welcome" data-slide-to="4" class=""></li>
+    <li data-target="#carousel1" data-slide-to="4" class=""></li>
     
-    <li data-target="#carousel-welcome" data-slide-to="5" class=""></li>
+    <li data-target="#carousel1" data-slide-to="5" class=""></li>
     
   </ol>
   <!-- Wrapper for slides-->
@@ -131,8 +127,14 @@
     </div>
   
   </div>
-  <!-- Controls--><a href="#carousel-welcome" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#carousel-welcome" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  <!-- Controls--><a href="#carousel1" data-slide="prev" class="left carousel-control"><span class="glyphicon glyphicon-chevron-left"></span></a><a href="#carousel1" data-slide="next" class="right carousel-control"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
+<script type="text/javascript">
+  var $ = jQuery.noConflict();
+  $(document).ready(function() { 
+      $('#carousel1').carousel({ interval: 3500, cycle: true });
+  }); 
+</script>
 
 </div>
 
