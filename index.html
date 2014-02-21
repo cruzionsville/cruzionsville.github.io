@@ -1,0 +1,125 @@
+---
+{ 
+    "title": "Welcome",
+    "template": "page",
+	"type": "page",
+	"index" : 0,
+	"mainCarousel" : {
+			"id": "carousel1",
+			"items" : [
+				{ "image" : "/content/photos/DSC_0029_cropped.jpg" },
+				{ "image" : "/content/photos/DSC_0036_cropped.jpg" },
+				{ "image" : "/content/photos/DSC_0056_cropped.jpg" },
+				{ "image" : "/content/photos/DSC_0064_cropped.jpg" },
+				{ "image" : "/content/photos/DSC_0073_cropped.jpg" },
+				{ "image" : "/content/photos/8b_crop.jpg" }
+			]
+	},
+	"mainImage": "/content/banner/BannRprint_960x150.jpg",
+	"regImage": "/content/buttons/registration.jpg",
+	"volunteerImage": "/content/buttons/volunteer.jpg",
+	"donateImage": "/content/buttons/donate.jpg",
+	"facebookImage": "/content/buttons/facebook.jpg",
+
+	"discount_tire": {
+			"src": "/content/sponsors/discounttire.jpg",
+			"url": "http://www.discounttire.com/dtcs/home.do"
+	},
+	"midwest_estate": {
+			"src": "/content/sponsors/midwest_estate.jpg",
+			"url": "http://www.midwestestatebuyers.com/"
+	},
+	"robert_goodman": {
+			"src": "/content/sponsors/RGJ_logo.png",
+			"url": "http://www.robertgoodmanjewelers.com/"
+	},
+	"social_links": {
+		"facebook_share" : "https://www.cruzionsville.com",
+		"google_plus_share": "https://www.cruzionsville.com",
+		"twitter_share" : "https://www.cruzionsville.com"
+	}
+}
+---
+
+<a href="http://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/CruZionsville">Share on Facebook</a>
+
+<div class="row">
+{{>carousel page.mainCarousel}}
+</div>
+
+{{#breaks 1}}
+
+<div class="row">
+	<div class="col-md-6">
+		{{#markdown}}
+
+Join Club members, friends and volunteers of the Central Indiana Region Porsche Club of America for an exciting one day event on the “Brick Street" in downtown Zionsville Saturday, June 14th. We anticipate having over 100 Porsche cars at our 3rd annual event. Bring your car, see old friends and meet new ones, listen to music, attend free seminars, shop and don’t miss your chance to bring home a CruZionsville trophy! We have added more great Sponsors this year and proceeds from the event go to the Alzheimer's Association - Greater Indiana Chapter.
+
+Early bird registration is only \$30 per car until June 7th. We will have VIP parking and registration this year at \$100 with all proceeds going to the Alzheimer's Association - Greater Indiana Chapter. Our goal for the 2014 Event is to raise \$25,000! 
+
+At 10:00 am cars will leave the staging area via Police escort to downtown Zionsville. Our show has gotten so big that we will now be using two blocks along Main Street for plenty of room for the cars. Its shine and show judging with some really cool new trophies this year. To add to the fun, we have added more judging categories. Bring your car and be a part of the excitement. 
+
+The show is from 10:30 am until 3:00 pm with the destination drive starting at 3:15 for Porsche car owners and ending back in Zionsville for a reception starting at 4:30 at Noah Grant's. We believe the reception will be a great way to share the day’s experiences and catch up with friends!
+
+See you on the “brick street”!
+
+Motor On
+
+Stephen Tarr
+
+2014 CruZionionsville Event Chair
+		{{/markdown}}
+	</div>
+	<div class="col-md-6">
+		<div class="text-center center-block">
+			{{#markdown}}
+
+### Registration
+<a href="http://www.cruzionsville.com/registration" target="_blank">{{#image url=page.regImage class="center-block"}}</a>
+
+### Make A Difference
+<a href="http://act.alz.org/goto/cruzionsville" target="_blank">{{#image url=page.donateImage class="center-block"}}</a>
+
+Donate now!
+
+### Find Us On Facebook
+<a href="http://www.facebook.com/CruZionsville" target="_blank">{{#image url=page.facebookImage class="center-block"}}</a>
+
+Share with your friends!
+
+### Volunteers Needed!
+<a href="http://cruzionsville.ivolunteer.com/" target="_blank">{{#image url=page.volunteerImage class="center-block"}}</a>
+
+Get involved with CruZionsville!
+
+			{{/markdown}}
+			<br>
+			<br>
+			{{>social page.social_links}}
+		</div>
+	</div>
+</div>
+
+
+{{#markdown}}
+
+###Title Sponsers
+____
+
+{{/markdown}}
+
+<br>
+<!-- <div class="row">
+	<div class="col-md-4">
+		<a href="{{page.discount_tire.url}}" target="_blank">{{#image url=page.discount_tire.src class="center-block"}}</a>
+	</div>
+	<br>
+	<div class="col-md-4">
+		<a href="{{page.robert_goodman.url}}" target="_blank">{{#image url=page.robert_goodman.src class="center-block"}}</a>
+	</div>
+	<br>
+	<div class="col-md-4">
+		<a href="{{page.midwest_estate.url}}" target="_blank">{{#image url=page.midwest_estate.src class="center-block"}}</a>
+	</div>
+</div> -->
+<br>
