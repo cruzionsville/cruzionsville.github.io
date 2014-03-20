@@ -85,7 +85,7 @@
     	
             <li class=""><a href="/index.html">Welcome</a></li>
 		
-            <li class="active"><a href="/find_us.html">Find Us</a></li>
+            <li class=""><a href="/find_us.html">Find Us</a></li>
 		
             <li class=""><a href="/photo_gallery.html">Photo Gallery</a></li>
 		
@@ -105,21 +105,81 @@
 
     <div class="container">
       
-  <h2>Breakfast and Staging Area</h2>
+  <link rel="bookmark" href="/posts/2014/03/welcome.html" />
+<div class="row">
+<article>
+	<h2><a href="Add link here!">Welcome to CruZionsville News</a></h2>
+	<div class="date">
+	Posted: <span>March 20, 2014.</span> Tags: 
+	
+		<span>
+			<a href="/tag/cruzionsville">CruZionsville</a>
+			
+		</span>
+	
+</div>
+	<hr/>
+	<p>Welcome to CruZionsville News!</p>
 
-<p>The breakfast and staging area is located at Zionsville Meadows.  The Meadows is located at:</p>
+</article>
+</div>
 
-<p><a href="http://goo.gl/maps/7NFTa">675 S 1000 E, Zionsville, IN</a></p>
+<!--
+    
+-->
 
-<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?client=safari&amp;oe=UTF-8&amp;ie=UTF8&amp;q=Zionsville+meadows&amp;fb=1&amp;gl=us&amp;hq=meadows&amp;hnear=0x8813557095a85b13:0x70cfba84ddeac50,Zionsville,+IN&amp;cid=0,0,17490054639522833475&amp;t=m&amp;ll=39.946299,-86.278231&amp;spn=0.007896,0.013733&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+<div class="row">
+    <ul id="paginator"></ul>
+</div>
 
-<h2>CruZionsville Event Area</h2>
+<script type='text/javascript'>
+    $(function(){
+        //DOM loaded
 
-<p>The CruZionsville event will be held in downtown Zionsville in the city lot near 200 Main Street.</p>
+        var pageTitles = new Array(); 
+        
+            
+                pageTitles[1] = "Welcome to CruZionsville News"
+            
+        
 
-<p><a href="http://goo.gl/maps/78uyR">200 S Main Street, Zionsville, IN</a></p>
+        var pageUrls = new Array(); 
+        
+            
+                pageUrls[1] = "/posts/2014/03/welcome.html"
+            
+        
 
-<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=200+S+Main+St,+Zionsville,+IN&amp;aq=0&amp;oq=200+S+Main&amp;sll=39.944358,-86.277287&amp;sspn=0.015382,0.021865&amp;gl=us&amp;ie=UTF8&amp;hq=&amp;hnear=200+S+Main+St,+Zionsville,+Indiana+46077&amp;t=m&amp;ll=39.949918,-86.261451&amp;spn=0.007896,0.013733&amp;z=16&amp;iwloc=A&amp;output=embed"></iframe>
+
+        
+            var url = $.url(); // parse the current page URL
+            var currentPage = url.param('pagenum');
+            if (currentPage == undefined) {
+                currentPage = 1;
+            }
+            var totalPages = 1;
+            console.log("url page number: " + currentPage);
+        
+
+        var options = {
+            currentPage: currentPage,
+            totalPages: totalPages,
+            alignment: "left",
+            bootstrapMajorVersion: 3
+            
+                
+            
+        }
+
+
+        $('#paginator').bootstrapPaginator(options);
+    });
+</script>
+
+
+
+
+  
 
 
     </div>

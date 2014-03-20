@@ -1,30 +1,39 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="/assets/favicon.ico">
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content=""/>
+  <meta name="author" content=""/>
+  <link rel="shortcut icon" href="/content/favicon.ico"/>
+  <link rel="alternate" type="application/atom+xml" title="Sitewide ATOM Feed" href="atom.xml" />
 
   <title>CruZionsville</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<!--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
+  <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
 
     <!-- Custom styles for this template -->
-  <link href="/assets/stylesheets/navbar-fixed-top.css" rel="stylesheet">
-  <link href="/assets/stylesheets/plusgallery.css" rel="stylesheet">
-  <link href="/assets/stylesheets/pygment_trac.css" rel="stylesheet">
-  <link href="/assets/stylesheets/social-buttons.css" rel="stylesheet">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  <link href="/assets/stylesheets/carousel-fade.css" rel="stylesheet">
-  <link href="/assets/stylesheets/site.css" rel="stylesheet">
-  <link href="/assets/stylesheets/zocial/zocial.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
-  <!--- so much depends on jQuery, that we do i here first -->
-  <script src="/assets/javascripts/jquery-1.10.2.min.js"></script>
+  <link href="/assets/stylesheets/site.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/plus_gallery.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/pygment_trac.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/social_buttons.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/carousel_fade.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/zocial/zocial.css" rel="stylesheet" type="text/css" />
+  <link href="/assets/stylesheets/blockimagequote.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  <!--- so much depends on jQuery, that we do it here first -->
+  <script src="/assets/javascripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+  <!--- and we might need this for each page earyly...it's short -->
+  <script src="/assets/javascripts/purl.js" type="text/javascript"></script>
 
   <!-- Just for debugging purposes. Don't actually copy this line! -->
   <!--[if lt IE 9]><script src="/assets/stylesheets/javascripts/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,18 +43,29 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+  
+
+
+
+
+
 </head>
 
   
   <body>
-    <!-- Static navbar -->
+  	<!-- Static navbar -->
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
 
-
-
   <div class="container">
+    
+      
+      <a class="navbar-brand pull-right visible-lg" style="padding: 5px;" href="#"><img class="img-responsive" src="/content/navbar/porsche-logo.png"></a>
+      
+    
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -55,28 +75,27 @@
       </button>
 
 	  
-      <a class="navbar-brand" style="padding: 5px;" href="#"><img class="img-responsive" src="/content/banner/BrandLogo.jpg"></a>
-      
-
+      <a class="navbar-brand visible-lg visible-md visible-xs" style="padding: 5px;" href="#"><img class="img-responsive" src="/content/navbar/cruzionsville-text.png"></a>
+      <a class="navbar-brand visible-sm" href="#">CruZionsville</a>
       
 
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
     	
-            <li class=> <a href="/index.html">Welcome</a></li>
+            <li class=""><a href="/index.html">Welcome</a></li>
 		
-            <li class=> <a href="/find_us.html">Find Us</a></li>
+            <li class=""><a href="/find_us.html">Find Us</a></li>
 		
-            <li class=> <a href="/photo_gallery.html">Photo Gallery</a></li>
+            <li class=""><a href="/photo_gallery.html">Photo Gallery</a></li>
 		
-            <li class=> <a href="/faq.html">FAQ</a></li>
+            <li class=""><a href="/faq.html">FAQ</a></li>
 		
-            <li class=> <a href="/registration.html">Registration</a></li>
+            <li class=""><a href="/registration.html">Registration</a></li>
 		
-            <li class=active> <a href="/sponsors.html">Sponsors</a></li>
+            <li class="active"><a href="/sponsors.html">Sponsors</a></li>
 		
-            <li class=> <a href="/postings.html">News</a></li>
+            <li class=""><a href="/postings.html">News</a></li>
 		
       </ul>
     </div>
@@ -85,191 +104,180 @@
 
 
     <div class="container">
-     <!-- Main component for a primary marketing message or call to action -->
-	  
+      
+  
 
-<h3>Title Sponsors</h3>
+<h3> Title Sponsors </h3>
+<hr>
 
-<hr />
-
-
-<!-- <div class="row" style="vertical-align: middle !important;">
+<br>
+<div class="row">
 	<div class="col-md-6">
-		<a href="http://www.discounttire.com/dtcs/home.do" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/discounttire.jpg"  ></a>
+		<a href="http://www.tomwoodaudiporsche.com/index.htm" target="_blank"><img src=/content/sponsors/tomwood_logo.png class=img-responsive center-block ></a>
 	</div>
+	<br>
 	<div class="col-md-6">
-		<a href="http://www.midwestestatebuyers.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/midwest_estate.jpg"  ></a>
+		<a href="http://www.sweetcars.com/" target="_blank"><img src=/content/sponsors/sweet_cars.jpg class=img-responsive center-block ></a>
 	</div>
-</div> -->
+	<br>
+</div>
+<br>
 
-
-<h3>Media Sponser</h3>
-
-<hr />
+<h3> Media Sponser </h3>
+<hr>
 
 
 <!-- <div class="row">
 	<div class="col-md-12">
-		<a href="http://www.currentzionsville.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/currentlogo.png"  ></a>
+		<a href="http://www.currentzionsville.com/" target="_blank"><img ></a>
 	</div>
 </div> -->
 
 
-
-<h3>Sponsors</h3>
-
-<hr />
-
+<h3> Sponsors </h3>
+<hr>
 
 
 <!-- <div class="row">
 	<div class="col-md-12">
 		<div class="row">
 			<div class="col-md-6">
-				<a href="http://www.robertgoodmanjewelers.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/RGJ_logo.png"  ></a>
+				<a href="http://www.robertgoodmanjewelers.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-6">
-				<a href="http://odaniel.porschedealer.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/ODaniel_Porsche_Audi_logo.jpg"  ></a>
+				<a href="http://odaniel.porschedealer.com/" target="_blank"><img ></a>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="NULL" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/jimmybuffit.jpg"  ></a>
+				<a href="" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://nikkiblaine.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/nikkiblaine3.jpg"  ></a>
+				<a href="http://nikkiblaine.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://www.ascseniorcare.com/zionsville-meadows/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/ZVM_resize.jpg"  ></a>
+				<a href="http://www.ascseniorcare.com/zionsville-meadows/" target="_blank"><img ></a>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-6">
-				<a href="http://www.premiergarage.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/premier-garage-logo.jpg"  ></a>
+				<a href="http://www.premiergarage.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-6">
-				<a href="http://www.classiccarcarrier.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/class_car_carrier.jpg"  ></a>
+				<a href="http://www.classiccarcarrier.com/" target="_blank"><img ></a>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="http://ingaspopcorn.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/ingas_popcorn3.jpg"  ></a>
+				<a href="http://ingaspopcorn.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://www.confectioneiress.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/confectioneiress.png"  ></a>
+				<a href="http://www.confectioneiress.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://www.acepartyandtents.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/AceLogo2.jpg"  ></a>
+				<a href="http://www.acepartyandtents.com/" target="_blank"><img ></a>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-4">
-				<a href="http://zionsvillemerchants.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/zma3.png"  ></a>
+				<a href="http://zionsvillemerchants.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://www.hopwoodcellars.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/hopwood3.jpg"  ></a>
+				<a href="http://www.hopwoodcellars.com/" target="_blank"><img ></a>
 			</div>
 			<br>
 			<div class="col-md-4">
-				<a href="http://www.witham.org/body.cfm?id=299" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/WithamAnsonLogo3.jpg"  ></a>
+				<a href="http://www.witham.org/body.cfm?id=299" target="_blank"><img ></a>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col-md-12">
-				<a href="http://www.mikescarwash.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/mikesLogo.jpg"  ></a>
+				<a href="http://www.mikescarwash.com/" target="_blank"><img ></a>
 			</div>
 		</div>
 	</div>
 </div> -->
 
 
-
-<h3>Friends of CruZionsville</h3>
-
-<hr />
+<h3> Friends of CruZionsville </h3>
+<hr>
 
 
 
 <!-- <div class="row">
 	<div class="col-md-4">
-		<a href="http://www.tomwoodaudiporsche.com/index.htm" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/tomwood_logo.png"  ></a>
+		<a href="http://www.tomwoodaudiporsche.com/index.htm" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://sullivanmunce.org/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/sullivanmuncelogo2.png"  ></a>
+		<a href="http://sullivanmunce.org/" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://www.wrightpcclinic.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/wrightpc.jpg"  ></a>
+		<a href="http://www.wrightpcclinic.com/" target="_blank"><img ></a>
 	</div>
 </div>
 <br>
 <div class="row">
 	<div class="col-md-4">
-		<a href="http://www.cobblestonegrill.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/cobblestone.jpg"  ></a>
+		<a href="http://www.cobblestonegrill.com/" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://www.noahgrants.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/noahgrants.jpg"  ></a>
+		<a href="http://www.noahgrants.com/" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://patrickskitchen.com/" target="_blank"><img  class="img-responsive center-block"  src=""  ></a>
+		<a href="http://patrickskitchen.com/" target="_blank"><img ></a>
 	</div>
 </div>
 <br>
 <div class="row">
 	<div class="col-md-4">
-		<a href="http://jonesgreenhouse.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/jones2.jpg"  ></a>
+		<a href="http://jonesgreenhouse.com/" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://astepabovebridal.net/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/astepabove2.jpg"  ></a>
+		<a href="http://astepabovebridal.net/" target="_blank"><img ></a>
 	</div>
 	<br>
 	<div class="col-md-4">
-		<a href="http://falkentire.com/" target="_blank"><img  class="img-responsive center-block"  src="/content/sponsors/FalkenTire2.jpg"  ></a>
+		<a href="http://falkentire.com/" target="_blank"><img ></a>
 	</div>
 </div>
 <br> -->
-	  <br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-      <br>
+    </div>
+    <br>
 <hr>
 <br>
 <footer>
 	<p class="site-footer">All contents © CruZionsville.  All rights reserved</p>
-	<p class="site-footer">Website development by <a href="www.pillowsoft.com">PillowSoft</a>.</p>
+	<p class="site-footer">Website development by <a href="http://www.pillowsoft.com/" title="PillowSoft LLC Home Page">PillowSoft</a>.</p>
+
 </footer>
 
 
-    </div>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
 
-	<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script src="/assets/javascripts/jqBootstrapValidation.js"></script>
-<script src="/assets/javascripts/contact_me.js"></script>
-<script src="/assets/javascripts/plusgallery.js"></script>
-<!--<script src="/assets/javascripts/live.js"></script>
--->
+<script src="/assets/javascripts/jqBootstrapValidation.js" type="text/javascript"></script>
+<script src="/assets/javascripts/contact_me.js" type="text/javascript"></script>
+<script src="/assets/javascripts/plusgallery.js" type="text/javascript"></script>
+<script src="/assets/javascripts/bootstrap-paginator.js" type="text/javascript"></script> 
+
+
+    
   </body>
 </html>
