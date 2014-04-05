@@ -1,39 +1,24 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <link rel="alternate" type="application/rss+xml" title="PillowSoft RSS Feed" href="/feed.xml" />
+<head>
   <meta charset="utf-8"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content=""/>
   <meta name="author" content=""/>
-  <link rel="shortcut icon" href="/content/favicon.ico"/>
-  <link rel="alternate" type="application/atom+xml" title="Sitewide ATOM Feed" href="atom.xml" />
+  <link rel="shortcut icon" href="/user_assets/favicon.ico"/>
+
+
 
   <title>CruZionsville</title>
 
-  <!-- Bootstrap core CSS -->
-<!--  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />-->
-  <link href="/assets/stylesheets/bootstrap.css" rel="stylesheet" type="text/css" />
-
-    <!-- Custom styles for this template -->
+ <!-- Custom styles for this template -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
+
   <link href="/assets/stylesheets/site.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/plus_gallery.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/pygment_trac.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/social_buttons.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/carousel_fade.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/zocial/zocial.css" rel="stylesheet" type="text/css" />
-  <link href="/assets/stylesheets/blockimagequote.css" rel="stylesheet" type="text/css" />
-
-
-
-
-  <!--- so much depends on jQuery, that we do it here first -->
-  <script src="/assets/javascripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-  <!--- and we might need this for each page earyly...it's short -->
-  <script src="/assets/javascripts/purl.js" type="text/javascript"></script>
 
   <!-- Just for debugging purposes. Don't actually copy this line! -->
   <!--[if lt IE 9]><script src="/assets/stylesheets/javascripts/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -43,18 +28,17 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
 
   
-
-
 
 
 
 </head>
 
-  
   <body>
-  	<!-- Static navbar -->
+  	
+<!-- Static navbar -->
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
@@ -75,7 +59,7 @@
       </button>
 
 	  
-      <a class="navbar-brand visible-lg visible-md visible-xs" style="padding: 5px;" href="#"><img class="img-responsive" src="/content/navbar/cruzionsville-text.png"></a>
+      <a class="navbar-brand visible-lg visible-md visible-xs" style="padding: 5px;" href="#"><img class="img-responsive" src="/user_assets/images/navbar/cruzionsville-text.png"></a>
       <a class="navbar-brand visible-sm" href="#">CruZionsville</a>
       
 
@@ -84,19 +68,19 @@
       <ul class="nav navbar-nav">
     	
             <li class=""><a href="/index.html">Welcome</a></li>
-		
+		  
             <li class=""><a href="/find_us.html">Find Us</a></li>
-		
+		  
             <li class=""><a href="/photo_gallery.html">Photo Gallery</a></li>
-		
+		  
             <li class=""><a href="/faq.html">FAQ</a></li>
-		
-            <li class=""><a href="/registration.html">Registration</a></li>
-		
+		  
             <li class=""><a href="/sponsors.html">Sponsors</a></li>
-		
+		  
+            <li class=""><a href="/registration.html">Registration</a></li>
+		  
             <li class=""><a href="/postings.html">News</a></li>
-		
+		  
       </ul>
     </div>
   </div>
@@ -105,100 +89,130 @@
 
     <div class="container">
       
+
+  <div class="row">
   <link rel="bookmark" href="/posts/2014/03/welcome.html" />
-<div class="row">
-<article>
-	<h2><a href="Add link here!">Welcome to CruZionsville News</a></h2>
-	<div class="date">
-	Posted: <span>March 20, 2014.</span> Tags: 
+  <h2 class="h2link">Welcome to CruZionsville News</h2>
+  
+
+<div class="date">
+	Posted: <span>March 19th 2014.</span>
+Tags:
 	
 		<span>
 			<a href="/tag/cruzionsville">CruZionsville</a>
 			
 		</span>
 	
+Categories:
+	
+		<span>
+			<a href="/category/general">General</a>
+			
+		</span>
+	
 </div>
-	<hr/>
-	<p>Welcome to CruZionsville News!</p>
 
-</article>
-</div>
+  <br>
+  
+<p>Welcome to CruZionsville News!</p>
 
-<!--
-    
--->
+
+  </div>
 
 <div class="row">
     <ul id="paginator"></ul>
 </div>
 
+
 <script type='text/javascript'>
     $(function(){
         //DOM loaded
 
-        var pageTitles = new Array(); 
-        
-            
-                pageTitles[1] = "Welcome to CruZionsville News"
-            
-        
+        $.getJSON( "/json/collections.json", function( data ) {
+          console.log(data);
 
-        var pageUrls = new Array(); 
-        
-            
-                pageUrls[1] = "/posts/2014/03/welcome.html"
-            
-        
+          var posts = data.posts;
 
+          // find what page number we are by comparing our url to items
+          var url = $.url(); // parse the current page URL
+          var currentPage = url.param('pagenum');
+          if (currentPage == undefined) {
+            currentPage = 1; // figure out page num here!
+            var pathUrl = url.attr('path');
+            currentPage = _.findIndex(posts, { 'url': pathUrl }) + 1;  // needs some error handling!
+          }
 
-        
-            var url = $.url(); // parse the current page URL
-            var currentPage = url.param('pagenum');
-            if (currentPage == undefined) {
-                currentPage = 1;
-            }
-            var totalPages = 1;
-            console.log("url page number: " + currentPage);
-        
+          var totalPages = posts.length;
 
-        var options = {
-            currentPage: currentPage,
+          var options = {
+            currentPage: currentPage, //currentPage,
             totalPages: totalPages,
             alignment: "left",
-            bootstrapMajorVersion: 3
-            
-                
-            
-        }
+            bootstrapMajorVersion: 3,
+            tooltipTitles: function (type, page, current) {
+                            var pageIndex = page-1;
+                            var currentPageIndex = currentPage - 1;
+                            switch (type) {
+                            case "first":
+                                return posts[0].title;
+                            case "prev":
+                                return ((currentPageIndex - 1) < 0) ? "" : posts[(currentPageIndex - 1)].title;
+                            case "next":
+                                return ((currentPageIndex + 1) > (posts.length-1)) ? "" : posts[(currentPageIndex + 1)].title;
+                            case "last":
+                                return posts[posts.length-1].title;
+                            case "page":
+                                return posts[pageIndex].title;
+                            }
+                        },
+            pageUrl: function(type, page, current) {
+                var pageIndex = page-1;
+                var currentPageIndex = currentPage - 1;
+                switch (type) {
+                case "first":
+                    return posts[0].url;
+                case "prev":
+                    return ((currentPageIndex - 1) < 0) ? "" : posts[(currentPageIndex - 1)].url;
+                case "next":
+                    return ((currentPageIndex + 1) > (posts.length-1)) ? "" : posts[(currentPageIndex + 1)].url
+                case "last":
+                    return posts[posts.length-1].url;
+                case "page":
+                    return posts[pageIndex].url;
+                }
+              }
+          }
 
-
-        $('#paginator').bootstrapPaginator(options);
+          $('#paginator').bootstrapPaginator(options);
+        });
     });
 </script>
 
 
 
 
-  
+
+
+
+
+      
+<p>Welcome to CruZionsville News!</p>
 
 
     </div>
-    <br>
+    
+<br>
 <hr>
 <br>
 <footer>
-	<p class="site-footer">All contents © CruZionsville.  All rights reserved</p>
-	<p class="site-footer">Website development by <a href="http://www.pillowsoft.com/" title="PillowSoft LLC Home Page">PillowSoft</a>.</p>
+	<p class="site-footer">All contents &copy; CruZionsville.  All rights reserved</p>
+	<p class="site-footer">Website development by <a href="http://www.pillowsoft.com" title="PillowSoft LLC Home Page"/>PillowSoft<a>.</p>
 
 </footer>
 
-
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript"></script>
-
-<script src="/assets/javascripts/jqBootstrapValidation.js" type="text/javascript"></script>
-<script src="/assets/javascripts/contact_me.js" type="text/javascript"></script>
-<script src="/assets/javascripts/plusgallery.js" type="text/javascript"></script>
-<script src="/assets/javascripts/bootstrap-paginator.js" type="text/javascript"></script> 
+    
+<script src="/assets/js/main.js" type="text/javascript"></script>
 
 
     
