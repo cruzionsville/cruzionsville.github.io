@@ -11,7 +11,7 @@
       <author></author>
       <link>undefined/posts/2014/03/welcome.html</link>
       <guid isPermaLink="true">undefined/posts/2014/03/welcome.html</guid>
-      <pubDate>2014-04-05T13:20:30-04:00</pubDate>
+      <pubDate>2014-04-12T11:57:20-04:00</pubDate>
       <description><![CDATA[ 
 <!DOCTYPE html>
 <html lang="en">
@@ -146,7 +146,7 @@ Categories:
         //DOM loaded
 
         $.getJSON( "/json/collections.json", function( data ) {
-          console.log(data);
+          //console.log(data);
 
           var posts = data.posts;
 
@@ -210,10 +210,6 @@ Categories:
 
 
 
-
-
-      
-<p>Welcome to CruZionsville News!</p>
 
 
     </div>
