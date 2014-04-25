@@ -17,7 +17,6 @@
  <!-- Custom styles for this template -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" type="text/css" />
 
-
   <link href="/assets/stylesheets/site.css" rel="stylesheet" type="text/css" />
 
   <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -91,6 +90,108 @@
 
     <div class="container">
       
+
+
+<div class="template_dummy"> </div>
+
+<!-- BEGIN: Underscore Template Definition. -->
+<script type="text/template" class="template">
+
+	<% var tagOrCategory = (rc.currentTag != null && rc.currentTag != undefined) ? rc.currentTag : ((rc.currentCategory != null && rc.currentCategory != undefined) ? rc.currentCategory : "Recent Posts"); %>
+
+	<h2><%-tagOrCategory%></h2>
+	<%
+		var matchingPosts = (rc.currentTag != null && rc.currentTag != undefined) ? _.filter(rc.posts, function(post){ return post.tags.indexOf(rc.currentTag) != -1; }) :
+																((rc.currentCategory != null && rc.currentCategory != undefined) ? _.filter(rc.posts, function(post){ return post.categories.indexOf(rc.currentCategory) != -1; }) : rc.posts) ;
+    %>
+    <% _.each( matchingPosts, function(post){ %>
+    	<h3 class="h2link"><a href="<%-post.url%>"><%-post.title%></a></h3>
+    	<div class="date">
+    	<% var dateString = moment(post.date).format('MMMM Do YYYY'); %>
+		Posted: <span><%- dateString %>.</span>
+		Tags:
+			<% _.each( post.tags, function( tag, index ){ %>
+				<span>
+					<a href="/summaries.html?tag=<%- tag %>"><%- tag %></a>
+					<% if ( index < (post.tags.length-1) ){ %>, <% } %>
+				</span>
+			<% }); %>
+		Categories:
+			<% _.each( post.categories, function( category, index ){ %>
+				<span>
+					<a href="/summaries.html?category=<%- category %>"><%- category %></a>
+					<% if ( index < (post.categories.length-1) ){ %>, <% } %>
+				</span>
+			<% }); %>
+		</div>
+		<p class="view">
+			<br/>
+			<%- post.excerpt %><a href="<%- post.url %>" class="more"> Read the post in full</a>
+		</p>
+    <% }); %>
+
+
+</script>
+<!-- END: Underscore Template Definition. -->
+
+ <script type="text/javascript">
+  // var $ = require('jquery');
+	// var $ = require('lodash');
+
+ $(function(){
+    //DOM loaded
+
+ 	 $.getJSON( "/json/collections.json", function( data ) {
+
+	    // find what category we shoudl show...if not specified, show all, by category
+	    var url = $.url(); // parse the current page URL
+	    var currentCategory = url.param('category');
+			var currentTag = url.param('tag');
+
+			if (currentCategory != null && currentCategory != undefined) {
+				//currentCategory = currentCategory.toLowerCase();
+				console.log("Category: " + currentCategory);
+			}
+
+			if (currentTag != null && currentTag != undefined) {
+				//currentTag = currentTag.toLowerCase();
+				console.log("Tag: " + currentTag);
+			}
+
+	    var posts = data.posts;
+
+			var totalPages = posts.length;
+			//console.log("Total page count: " + totalPages);
+
+	    // When rending an underscore template, we want top-level
+	    // variables to be referenced as part of an object. For
+	    // technical reasons (scope-chain search), this speeds up
+	    // rendering; however, more importantly, this also allows our
+	    // templates to look / feel more like our server-side
+	    // templates that use the rc (Request Context / Colletion) in
+	    // order to render their markup.
+	    _.templateSettings.variable = "rc";
+
+			var passedData = {
+				posts: data.posts,
+				currentTag: currentTag,
+				currentCategory : currentCategory
+			}
+
+	    // Grab the HTML out of our template tag and pre-compile it.
+	    var template = _.template(
+	        $( "script.template" ).html()
+	    );
+
+	    // Render the underscore template and inject it after the H1
+	    // in our current DOM.
+	    $( "div.template_dummy" ).after(
+	        template( passedData )
+	    );
+	});
+});
+</script>
+
 
 
     </div>
