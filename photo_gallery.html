@@ -94,25 +94,42 @@
 
     <div class="container">
       
-<h1 id="photos-from-2013">Photos from 2013</h1>
-<p><div id="plusgallery" data-type="google" data-album-limit="1000" data-userid="117050704742820689631" data-include="5989943079573650753,5989951035795073873,5989947206704207889" data-credit="false"></div></p>
-<script type="text/javascript">
-$(function(){
-    //DOM loaded
-        $('#plusgallery').plusGallery();
-});</script>
 
 
 
-<h4 id="part-1-photos-by-anita-perry">Part 1 - Photos by Anita Perry</h4>
-<h4 id="part-2-photos-by-j-scott-hendricks">Part 2 - Photos by J. Scott Hendricks</h4>
-<p><br></p>
-<h4 id="2013-driver-portraits">2013 Driver Portraits</h4>
-<ul>
-<li>Photos by Anita Perry</li>
-<li>Choreography by J. Scott Hendricks</li>
-</ul>
+<h1>Photo Galleries</h1>
 <hr>
+<br>
+<h4 id="part-1-photos-by-anita-perry">2013: Part 1 - Photos by Anita Perry</h4>
+<h4 id="part-2-photos-by-j-scott-hendricks">2013: Part 2 - Photos by J. Scott Hendricks</h4>
+<h4 id="2013-driver-portraits">2013: Driver Portraits - Photos by Anita Perry, Choreography by J. Scott Hendricks</h4>
+<br>
+<hr>
+<h4>2014: Photos by Brad Pillow, Scott Hendricks, James Legault, Luc Ballegeer </h4>
+<br>
+<hr>
+<br>
+
+
+<div id="nanogallery1"></div>
+<script type="text/javascript">
+
+$(document).ready(function () {
+          $('#nanogallery1').nanoGallery({
+            kind:'picasa',
+            userID:'cruzionsville@gmail.com',
+
+            thumbnailLabel: {
+              position: 'onBottom',
+              displayDescription: false,
+              hideIcons:true
+            }
+          });
+        });
+
+</script>
+
+
 
 
     </div>
